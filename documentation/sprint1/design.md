@@ -49,7 +49,7 @@
 
 ### ERD
 
-![ERD](./images/ERD.jpg)
+![ERD](../images/ERD.jpg)
 
 ### DDL
 
