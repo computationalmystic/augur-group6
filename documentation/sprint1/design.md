@@ -46,10 +46,23 @@
 
 
 ## Database Design
+In order for individual contributors to inspect their impact on repository scores, we would need a use case that identifies their own contributions to alternate projects. In addition, we would need the use case to allow visual representation of their repository score on projects they are working on. Furthermore, we would need the use case to calculate the individual’s impact on a repo’s score.     
+
+In addition, we would need a use case that allows business to view consistent repo scores over  various amount of time. The use case would need to allow individuals to view the repo scores, and display the overall score based off their consistency to various projects. Furthermore, the use case would need to display the overall history of scores and provide brief descriptions of each calculation for the scores. 
+
+Lastly, we’d need a use case for community managers to inspect a recent time frame of repo scores. The use case would also need to display the repo scores  and the overall scores over an adjustable period of time. In addition, it would need to display individual show how each stat impacts the overall score. Finally, it would need to provide a description of each calculation for the scores in each section. 
+
+For this design we will be using multiple software components. We will be using Augur’s dependencies in order for Augur to run properly. In addition, we will use sublime text to manipulate some of the original coding that is provided in the Augur project.    
+
+We want the Augur project to be a lot more user friendly and easier to navigate. In other words, we will also make a few changes to the homepage of Augur along with other repositories that will help satisfy the requirements of our use cases for different users.
 
 ### ERD
-
+1. GHTorrent
 ![ERD](../images/ERD.jpg)
+
+2. Facade
+![ERD](../images/ERD2.jpg)
+
 
 ### DDL
 
@@ -352,30 +365,38 @@ CREATE TABLE 'repos' (
 
 ### User Interface Files
 
-1. first one
-2. second one
-3. etc.
+1. ScoreCard.vue
+2. StreamChart.vue
+3. RelativeLineChart.vue
+4. Tabs.vue
 
 
 ### Model Files (Database Access)
 
-1. first one
-2. second one
-3. etc
+1. ghtorrent.py
+2. facade.py
+3. ghtorrent/routes.py
+4. facade/routes.py
 
 
 ### Controller Files (API or other)
 
-1. first one
-2. second one
-3. etc.
+1. router.js
+2. AugurApi.js
+
 
 ## Describe languages you need to use, and any gaps in skills on your team.
 
 1. Python
-    - how you will use examples or learn what you need
+    - SQLAlchemy to query the database
+    - Run formulas on data to calculate score(s)
+    - Create the endpoint in the backend
+
 2. second language
-    - how you will use examples or learn what you need
+    - Access endpoint in the frontend
+    - Create charts with Vega-Lite to display data
+    - Mount the charts on a new page (ScoreCard.vue) with a new tab (Score) using a new route definition (/score)
+
 3. Skill gaps, if any, otherwise specify who is doing what
     - Gabe - Backend and frontend (python and js)
     - Felipe - Backend and frontend (python and js)
