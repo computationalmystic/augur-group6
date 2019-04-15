@@ -22,7 +22,7 @@
     - See how each stat individually impacts the overall score
     - Description of how each stat is used to calculate scores for each section
 
-## Stats
+### Stats to calculate the score
 1. Code Development (commits, pull req, issues)
     - Frequency of commits
     - Number of commit
