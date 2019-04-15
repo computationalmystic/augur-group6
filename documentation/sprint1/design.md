@@ -392,7 +392,7 @@ CREATE TABLE 'repos' (
     - Run formulas on data to calculate score(s)
     - Create the endpoint in the backend
 
-2. second language
+2. JavaScript
     - Access endpoint in the frontend
     - Create charts with Vega-Lite to display data
     - Mount the charts on a new page (ScoreCard.vue) with a new tab (Score) using a new route definition (/score)
